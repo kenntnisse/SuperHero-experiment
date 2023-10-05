@@ -36,14 +36,16 @@
 * You may use Arrays
 */
 import java.util.Random;
+import java.util.Scanner;
 // experiment
 class Main {
   static Random rand = new Random();
   static final int seed = rand.nextInt(20)+1;
   public static void main(String[] args) {
-    
-    System.out.println("Hello world!");
-    
+
+    Scanner scan = new Scanner(System.in);
+    //System.out.println("Hello world!");
+    //if (true) return;
     SuperHero[] supes = new SuperHero[seed];
     for (int i = 0; i < seed; i++){
       supes[i] = new SuperHero("s"+(i+1), i+1);
@@ -57,6 +59,7 @@ class Main {
     }
 
     for (int i = 0; i < 1000; i++){
+      scan.next();
       System.out.println("Day " + i);
       passDay(supes, s, customers);
     }
