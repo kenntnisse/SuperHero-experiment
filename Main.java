@@ -36,7 +36,7 @@
 * You may use Arrays
 */
 import java.util.Random;
-
+// experiment
 class Main {
   static Random rand = new Random();
   static final int seed = rand.nextInt(20)+1;
@@ -76,9 +76,6 @@ class Main {
     for (int i = 0; i < supes.length; i++){
       supes[i].createCake(s);
     }
-    //for (Cake c: s.displayCakes()){
-    //  System.out.println(c.appraise());
-    //}
     for (int i = 0; i < customers.length; i++){
       customers[i].getMoney(customers[i].appraise());
       transaction(customers[i], s, customers[i].findCake(s));
